@@ -8,7 +8,7 @@ setInterval(weather, 10000);
 
 function weather()
 {
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=a8a87ad6ba72503a0e9c3c6832e40da2&units=metric";
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric";
     https.get(url, function (response)
     {
         response.on('data', function (data)
